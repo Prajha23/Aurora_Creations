@@ -25,6 +25,7 @@ fetch(apiUrl)
   });
 
 
+// Form submit ka function
 document.getElementById('submitBtn').addEventListener('click', function(event) {
   event.preventDefault();  // Form ko default submit hone se rokega
 
@@ -49,7 +50,20 @@ document.getElementById('submitBtn').addEventListener('click', function(event) {
   .then(response => response.json())
   .then(data => {
     console.log('Message sent successfully:', data);
+    
+    // Alert message dikhaenge jab form submit ho jayega
     alert('Your message has been sent!');
+    
+    // Form ko clear karenge (input fields ko reset karenge)
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('message').value = '';
+    
+    // Optional: Agar tum chahti ho ki form ke baad user kisi aur page par chala jaye, to redirect kar sakti ho
+    // window.location.href = "thankyou.html"; // Redirect to "thankyou.html" page
+    
+    // Contact details ko fetch karne ke liye page ko dobara reload karenge (ya fir "messagesContainer" ko update karenge)
+    window.location.reload();  // This will refresh the page and clear the message list
   })
   .catch(error => {
     console.error('Error submitting message:', error);

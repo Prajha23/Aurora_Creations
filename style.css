@@ -91,7 +91,7 @@ nav ul li a:hover::after {
 .hero {
     position: relative;
     min-height: 100vh; /* Full screen height */
-    background: url('/assets/images/bg_hero.jpg') no-repeat center center/cover;
+    background: url('bg_hero.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -258,7 +258,7 @@ About us page CSS
 .about-hero {
     position: relative;
     height: 80vh;
-    background: url('/assets/images/bg_hero.jpg') no-repeat center center/cover;
+    background: url('bg_hero.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -427,7 +427,7 @@ body {
     justify-content: center;
     text-align: center;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('/assets/images/bg_hero.jpg') no-repeat center center/cover;
+                url('bg_hero.jpg') no-repeat center center/cover;
     animation: fadeIn 1.5s ease-in-out;
 }
 

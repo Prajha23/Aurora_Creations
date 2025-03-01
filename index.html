@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Creations - Event Management</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="https://kit.fontawesome.com/yourkitcode.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header id="navbar">
+        <img src="/assets/images/logo_aurora.png" alt="Aurora Creations Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2>Your Dream Event, Our Responsibility!</h2>
+            <p>We bring your vision to life with customized themes & perfect execution.</p>
+            <a href="contact.html" class="btn">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service">
+                <h3>Wedding Functions</h3>
+                <p>We make your special day magical with stunning decor & seamless planning.</p>
+            </div>
+            <div class="service">
+                <h3>Corporate Events</h3>
+                <p>Professional & memorable corporate gatherings with our expert planning.</p>
+            </div>
+            <div class="service">
+                <h3>College Fests</h3>
+                <p>High-energy college fests, managed flawlessly for an unforgettable experience.</p>
+            </div>
+            <div class="service">
+                <h3>Private Parties</h3>
+                <p>Exclusive & elegant private parties tailored to your theme.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        // Navbar Scroll Effect
+        window.addEventListener("scroll", function() {
+            var navbar = document.getElementById("navbar");
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <img src="assets/images/logo_aurora.png" alt="Logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html" class="active">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero service-hero">
+        <div class="hero-content">
+            <h2>Our Services</h2>
+            <p>Creating unforgettable experiences for every occasion.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>What We Offer</h2>
+        <div class="service-container">
+            <div class="service">
+                <i class="fas fa-birthday-cake"></i>
+                <h3>Birthday Parties</h3>
+                <p>Unique themes, décor, and entertainment for all ages.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-ring"></i>
+                <h3>Weddings & Engagements</h3>
+                <p>Dream weddings with personalized décor & planning.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-microphone"></i>
+                <h3>Corporate Events</h3>
+                <p>Seamless conferences, meetings & office parties.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-music"></i>
+                <h3>Concerts & Live Shows</h3>
+                <p>Stage setup, lighting, and sound management.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-school"></i>
+                <h3>College & School Events</h3>
+                <p>Fests, farewells, fresher’s parties & more.</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-child"></i>
+                <h3>Baby Showers & Anniversaries</h3>
+                <p>Memorable moments with family & friends.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Event Masters. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        window.onscroll = function() {
+            let nav = document.getElementById("navbar");
+            if (window.scrollY > 50) {
+                nav.style.padding = "10px 30px";
+                nav.style.background = "rgba(0, 0, 0, 0.9)";
+            } else {
+                nav.style.padding = "15px 40px";
+                nav.style.background = "rgba(0, 0, 0, 0.7)";
+            }
+        };
+        </script>
+        
+
+</body>
+</html>

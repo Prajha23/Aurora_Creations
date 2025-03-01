@@ -1,0 +1,761 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0a0a0a;
+    color: white;
+}
+
+/* Navbar */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;  /* Logo left & navbar right me */
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
+}
+
+header.scrolled {
+    background: rgba(0, 0, 0, 0.95);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo */
+.logo {
+    height: 50px;
+    margin-left: 20px;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: flex-end;  /* Navbar ko right side me align kiya */
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Nav Items */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin-right: 40px;  /* Right se extra spacing */
+}
+
+/* Nav Links */
+nav ul li {
+    display: inline-block;
+}
+
+/* Nav Links Styling */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding: 8px 12px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+nav ul li a:hover {
+    color: red;
+}
+
+/* Underline Animation */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: red;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    min-height: 100vh; /* Full screen height */
+    background: url('/assets/images/bg_hero.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+}
+
+/* Fix for uneven black bottom */
+.hero-content {
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-out forwards;
+    z-index: 2;
+    width: 80%;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: darkred;
+}
+
+/* Services Section */
+.services {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, rgba(10, 10, 10, 1), rgba(50, 0, 0, 0.8));
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(75, 9, 9, 0.3);
+    margin-top: 0;
+    padding-bottom: 80px;
+}
+
+/* Service Boxes */
+.service-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.service {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 250px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.service h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.service p {
+    font-size: 16px;
+    color: #ddd;
+}
+
+/* Smooth hover effect */
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/*
+About us page CSS 
+*/
+/* Navbar Fix */
+#navbar {
+    display: flex;
+    justify-content: space-between; /* Change this from center */
+    align-items: center;
+    padding: 15px 40px;  
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+/* Logo Fix */
+#navbar img {
+    height: 60px;
+    width: auto;
+    max-width: 180px;
+}
+
+/* Nav Links */
+#navbar ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+#navbar ul li a:hover {
+    color: red;
+}
+
+/* Hero Section Fix */
+.hero {
+    margin-top: 80px;
+}
+
+.about-hero {
+    position: relative;
+    height: 80vh;
+    background: url('/assets/images/bg_hero.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Hero Content */
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+/* Our Story Section - Dark Mode */
+.our-story {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(16, 0, 0, 0.474); /* Same dark red tone */
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(75, 9, 9, 0.3);
+    color: white;
+}
+
+.our-story h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Why Choose Us Section */
+.why-choose {
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(16, 0, 0, 0.474); /* Same dark red tone */
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(75, 9, 9, 0.3);
+}
+
+/* Why Choose Us Cards */
+.why-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.why-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.why-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.why-box i {
+    font-size: 2rem;
+    color: red;
+    margin-bottom: 10px;
+}
+
+.why-box h3 {
+    font-size: 20px;
+    color: white;
+}
+
+.why-box p {
+    font-size: 16px;
+    color: #ddd;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    color: white;
+    font-size: 14px;
+}
+
+
+/* Service Page CSS*/
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #111;
+    color: white;
+}
+
+/* Navbar - Glassmorphism Effect */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: 0.4s ease-in-out;
+}
+
+
+#navbar img {
+    height: 60px;
+    max-width: 180px;
+}
+
+#navbar ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Navbar Hover Effect */
+#navbar ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: red;
+    transition: width 0.3s;
+}
+
+#navbar ul li a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 80px;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('/assets/images/bg_hero.jpg') no-repeat center center/cover;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Services Section - Neon Effect */
+.services {
+    text-align: center;
+    padding: 80px 20px;
+     background: rgba(16, 0, 0, 0.474);
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual Service Cards */
+.service {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px  rgba(16, 0, 0, 0.474);
+    width: 280px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glowing Border */
+.service::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, red, black, red);
+    z-index: -1;
+    border-radius: 15px;
+}
+
+/* Gradient Border Effect */
+.service::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: #111;
+    border-radius: 15px;
+    z-index: -1;
+}
+
+.service i {
+    font-size: 2.5rem;
+    color: red;
+    margin-bottom: 15px;
+}
+
+.service h3 {
+    font-size: 22px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* Service Card Hover Effect */
+.service:hover {
+    transform: scale(1.05);
+    background: red;
+    color: white;
+    box-shadow: 0 0 20px red;
+}
+
+.service:hover i {
+    color: white;
+}
+
+/* Smooth Scrolling Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    color: white;
+    font-size: 14px;
+}
+
+
+/* CONTACT PAGE  */
+
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #111;
+    color: white;
+}
+
+/* Navbar - Glassmorphism Effect */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: 0.4s ease-in-out;
+}
+
+#navbar img {
+    height: 60px;
+    max-width: 180px;
+}
+
+#navbar ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Navbar Hover Effect */
+#navbar ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: red;
+    transition: width 0.3s;
+}
+
+#navbar ul li a:hover::after {
+    width: 100%;
+}
+
+#navbar ul li a:hover {
+    color: red;
+}
+
+/* Contact Section */
+.contact {
+    margin-top: 80px;
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+    url('/assets/images/bg_hero.jpg') no-repeat center center/cover;
+animation: fadeIn 1.5s ease-in-out;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 2px solid red;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Contact Form Button */
+.contact-form button {
+    padding: 15px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: white;
+    color: red;
+}
+
+/* Contact Details */
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 60px;
+    text-align: left;
+}
+
+.contact-details div {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    width: 250px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.contact-details div:hover {
+    background: red;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.7);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.contact-details i {
+    font-size: 2.5rem;
+    color: red;
+    margin-bottom: 15px;
+    transition: 0.3s ease;
+}
+
+.contact-details div:hover i {
+    color: white;
+}
+
+.contact-details h3 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.contact-details p {
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .contact-details {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-details div {
+        width: 90%;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    color: white;
+    font-size: 14px;
+}
